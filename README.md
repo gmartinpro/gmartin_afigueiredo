@@ -1,3 +1,13 @@
+# Consignes
+Utiliser : 
+- Composants
+- Pipes
+- Custom Pipes
+- ReactiveForms (group, control, array)
+- Validators avec erreurs
+- Custom Validator
+- Angular Material
+
 # ProjetGroupe
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.2.
