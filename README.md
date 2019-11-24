@@ -7,7 +7,7 @@
 - Custom Pipes --> ✅
 - ReactiveForms (group, control, array) --> ✅ (Adrien)
 - Validators avec erreurs --> ✅ (Adrien)
-- Custom Validator
+- Custom Validator --> ✅
 - Angular Material --> ✅ (Gabriel)
 
 # ProjetGroupe
