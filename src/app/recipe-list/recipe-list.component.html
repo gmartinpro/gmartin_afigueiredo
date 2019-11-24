@@ -1,3 +1,5 @@
 <div>
-  <app-recipe-detail *ngFor="let recipe of recipes" [recipe]="recipe"></app-recipe-detail>
+  <button mat-raised-button (click)="deleteAll()">Tout Supprimer</button>
+  <button mat-raised-button (click)="addRecipe()">Ajouter une recette</button>
+  <app-recipe-detail (delete)="refreshList()" *ngFor="let recipe of recipes" [recipe]="recipe"></app-recipe-detail>
 </div>

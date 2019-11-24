@@ -3,8 +3,8 @@
 ## Elements à utiliser :
 
 - Composants --> ✅
-- Pipes
-- Custom Pipes
+- Pipes --> ✅
+- Custom Pipes --> ✅
 - ReactiveForms (group, control, array) --> ✅ (Adrien)
 - Validators avec erreurs --> ✅ (Adrien)
 - Custom Validator

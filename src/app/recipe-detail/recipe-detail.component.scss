@@ -1,5 +1,5 @@
 mat-card {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 100%),
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.8) 100%),
     url(https://static.cuisineaz.com/400x320/i16694-cuisses-de-lapin-a-la-moutarde.jpg);
   position: relative;
   display: block;
@@ -11,17 +11,24 @@ mat-card {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-height: 270px;
   min-height: 125px;
   color: white;
   margin-bottom: 1em;
   margin-top: 1em;
-  max-width: 40%;
+  max-width: 60%;
   padding-bottom: 10%;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
   background-color: #9ba7b1;
   mat-card-subtitle {
     color: white;
+  }
+  mat-card-content {
+    span,
+    h2,
+    h3,
+    p {
+      color: white;
+    }
   }
 }

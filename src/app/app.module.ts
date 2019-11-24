@@ -16,13 +16,18 @@ import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatChipsModule } from "@angular/material/chips";
 import { MatCardModule } from "@angular/material/card";
 import { MatListModule } from "@angular/material/list";
+import { RecipesService } from 'src/services/recipes.service';
+import { EditRecipeComponent } from './edit-recipe/edit-recipe.component';
+import { SeeHidePipe } from './pipes/see-hide.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     RecipeAddComponent,
     RecipeListComponent,
-    RecipeDetailComponent
+    RecipeDetailComponent,
+    EditRecipeComponent,
+    SeeHidePipe
   ],
   entryComponents: [
     RecipeDetailComponent
@@ -40,7 +45,7 @@ import { MatListModule } from "@angular/material/list";
     MatCardModule,
     MatListModule
   ],
-  providers: [],
+  providers: [RecipesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
