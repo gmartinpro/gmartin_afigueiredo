@@ -1,1 +1,132 @@
-<p>recipe-add works!</p>
+<form class="container" [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <mat-form-field class="full">
+      <input
+        type="text"
+        matInput
+        placeholder="Nom de la recette"
+        formControlName="name"
+      />
+      <mat-error *ngIf="name.invalid && name.touched">
+        Le nom de la recette est obligatoire
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field class="full">
+      <textarea
+        matInput
+        placeholder="Description"
+        formControlName="description"
+      >
+      </textarea>
+      <mat-error *ngIf="description.invalid && description.touched">
+        La description de la recette est obligatoire
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="row column">
+    <mat-form-field class="full">
+      <input
+        type="number"
+        matInput
+        placeholder="Temps de préparation (minutes)"
+        formControlName="preparingTime"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="full">
+      <input
+        type="number"
+        matInput
+        placeholder="Temps de cuisson (minutes)"
+        formControlName="cookingTime"
+      />
+    </mat-form-field>
+  </div>
+
+  <div class="column" formArrayName="steps">
+    <div *ngFor="let step of steps.controls; let i = index" [formGroupName]="i">
+      <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title>Etape {{ i }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-form-field>
+            <textarea
+              matInput
+              placeholder="Explication"
+              rows="5"
+              formControlName="explication"
+            ></textarea>
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+          <button
+            type="button"
+            mat-raised-button
+            color="warn"
+            (click)="deleteStep(i)"
+          >
+            Supprimer
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  <div class="row">
+    <button
+      type="button"
+      mat-raised-button
+      color="primary"
+      (click)="addStepFormRow()"
+    >
+      Ajouter une étape
+    </button>
+  </div>
+  <div formArrayName="ingredients">
+    <mat-list
+      *ngFor="let ingredient of ingredients.controls; let i = index"
+      [formGroupName]="i"
+    >
+      <mat-list-item>
+        <mat-select formControlName="name" placeholder="Nom">
+          <mat-option
+            *ngFor="let ingredient of ingredientsName"
+            [value]="ingredient"
+          >
+            {{ ingredient }}
+          </mat-option>
+        </mat-select>
+      </mat-list-item>
+      <button
+        type="button"
+        mat-raised-button
+        color="warn"
+        (click)="deleteIngredient(i)"
+      >
+        Supprimer
+      </button>
+    </mat-list>
+  </div>
+  <div class="row">
+    <button
+      type="button"
+      mat-raised-button
+      color="primary"
+      (click)="addIngredientFormRow()"
+    >
+      Ajouter un ingrédient
+    </button>
+  </div>
+  <button
+    mat-raised-button
+    color="primary"
+    [disabled]="recipeForm.invalid"
+    type="submit"
+  >
+    Envoyer
+  </button>
+</form>

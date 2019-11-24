@@ -1,12 +1,14 @@
 # Consignes
-## Elements à utiliser : 
-- Composants
+
+## Elements à utiliser :
+
+- Composants --> ✅
 - Pipes
 - Custom Pipes
-- ReactiveForms (group, control, array)
-- Validators avec erreurs
+- ReactiveForms (group, control, array) --> ✅ (Adrien)
+- Validators avec erreurs --> ✅ (Adrien)
 - Custom Validator
-- Angular Material
+- Angular Material --> ✅ (Gabriel)
 
 # ProjetGroupe
 
