@@ -1,1 +1,8 @@
-<p>recipe-detail works!</p>
+<div *ngIf="recipe">
+  <mat-card [ngStyle]="{background: getImageUrl()}">
+    <mat-card-title>{{recipe.title}}</mat-card-title>
+    <mat-card-subtitle *ngIf="!recipe.preparatingTime">Aucun temps de préparation estimé</mat-card-subtitle>
+    <mat-card-subtitle *ngIf="recipe.preparatingTime">Temps de préparation : {{recipe.preparatingTime}} min
+    </mat-card-subtitle>
+  </mat-card>
+</div>

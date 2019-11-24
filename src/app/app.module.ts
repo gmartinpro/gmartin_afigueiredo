@@ -7,7 +7,8 @@ import { RecipeAddComponent } from './recipe-add/recipe-add.component';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,10 +16,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RecipeListComponent,
     RecipeDetailComponent
   ],
+  entryComponents: [
+    RecipeDetailComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
