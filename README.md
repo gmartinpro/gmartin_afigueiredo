@@ -2,12 +2,12 @@
 
 ## Elements à utiliser :
 
-- Composants --> ✅
-- Pipes --> ✅
-- Custom Pipes --> ✅
+- Composants --> ✅ (Les deux)
+- Pipes --> ✅ (Gabriel)
+- Custom Pipes --> ✅ (Gabriel)
 - ReactiveForms (group, control, array) --> ✅ (Adrien)
 - Validators avec erreurs --> ✅ (Adrien)
-- Custom Validator --> ✅
+- Custom Validator --> ✅ (Adrien)
 - Angular Material --> ✅ (Gabriel)
 
 # ProjetGroupe
